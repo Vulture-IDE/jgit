@@ -46,7 +46,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'org.vulture.ide'
             artifactId = 'jgit'
-            version = '6.9.0.202403050737-r' 
+            version = '6.9.0.202405241150-r' 
                                 
             artifact shadowJar
         }
