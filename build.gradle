@@ -29,6 +29,11 @@ java {
     }
 }
 
+shadowJar {    
+    exclude 'META-INF/maven/org.eclipse.jgit/*/pom.xml'
+    exclude 'META-INF/maven/org.eclipse.jgit/*/pom.properties'
+}
+
 dependencies {
     implementation 'org.eclipse.jgit:org.eclipse.jgit:6.9.0.202403050737-r'
     implementation 'org.slf4j:slf4j-api:2.1.0-alpha1'
@@ -43,7 +48,7 @@ publishing {
             artifactId = 'jgit'
             version = '6.9.0.202403050737-r' 
                                 
-            from components.java
+            artifact shadowJar
         }
     }
 }
