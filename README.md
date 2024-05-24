@@ -1,1 +1,1 @@
-# jgit
+# jgit for Android

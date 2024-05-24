@@ -24,9 +24,9 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean && ./gradlew shadowJar
 
-      - name: Upload release jgit-all
+      - name: Upload release jgit
         uses: actions/upload-artifact@v4
         if: ${{ !github.head_ref }}
         with:
-          name: jgit-all
-          path: build/libs/jgit-all.jar
+          name: jgit
+          path: build/libs/jgit.jar
