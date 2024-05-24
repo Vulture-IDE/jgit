@@ -44,12 +44,12 @@ dependencies {
 
 publishing {
     publications {
-        maven(MavenPublication) {
+        shadow(MavenPublication) { publication ->            
             groupId = 'org.vulture.ide'
             artifactId = 'jgit'
-            version = '6.9.0.202405241150-r' 
-                                
-            artifact shadowJar
+            version = '6.9.0.202405241222-r' 
+         
+            from project.shadow.component(publication) 
         }
     }
 }
