@@ -17,9 +17,9 @@ java {
 
 spotless {
     java {
-  	   target "**/*.java"		  
-  	   googleJavaFormat()
-  	}
+        target "**/*.java"		  
+        googleJavaFormat()
+    }
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -37,8 +37,8 @@ shadowJar {
 dependencies {
     implementation 'org.eclipse.jgit:org.eclipse.jgit:6.9.0.202403050737-r'
     implementation 'org.slf4j:slf4j-api:2.1.0-alpha1'
-	implementation 'org.slf4j:slf4j-simple:2.1.0-alpha1'
-	implementation 'com.googlecode.javaewah:JavaEWAH:1.2.3'
+    implementation 'org.slf4j:slf4j-simple:2.1.0-alpha1'
+    implementation 'com.googlecode.javaewah:JavaEWAH:1.2.3'
 }
 
 publishing {
