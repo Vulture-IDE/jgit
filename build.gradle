@@ -32,6 +32,7 @@ java {
 shadowJar {    
     exclude 'META-INF/maven/org.eclipse.jgit/*/pom.xml'
     exclude 'META-INF/maven/org.eclipse.jgit/*/pom.properties'
+    archiveFileName.set("${project.name}.jar")
 }
 
 dependencies {
