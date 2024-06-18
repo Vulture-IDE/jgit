@@ -15,6 +15,9 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
+tasks.assemble.dependsOn tasks.shadowJar
+tasks.build.dependsOn tasks.shadowJar
+
 spotless {
     java {
         target "**/*.java"		  
@@ -33,6 +36,12 @@ shadowJar {
     exclude 'META-INF/maven/org.eclipse.jgit/*/pom.xml'
     exclude 'META-INF/maven/org.eclipse.jgit/*/pom.properties'
     archiveFileName.set("${project.name}.jar")
+    
+    dependencies {
+        exclude(dependency('org.slf4j:slf4j-api:2.1.0-alpha1'))
+        exclude(dependency('org.slf4j:slf4j-simple:2.1.0-alpha1'))
+        exclude(dependency('com.googlecode.javaewah:JavaEWAH:1.2.3'))
+    }
 }
 
 dependencies {
